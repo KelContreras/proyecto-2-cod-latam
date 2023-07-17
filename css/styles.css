@@ -1,13 +1,7 @@
-/* En este archivo escriban su CSS */ */
-
 /* Fonts */
 /* Importar aquí la font */
 
-
-
-/* Aquí les dejamos como ayuda este "reset" en el cual ajustamos algunas propiedades
-*  cuyos valores asigna por defecto el navegador.
-*/
+/* En este archivo escriban su CSS */ */
 
 /* Reset */
 * {
@@ -39,11 +33,9 @@ header {
     justify-content: space-between;
     position: fixed;
     box-shadow: 0.4px 10px -5px #cb0909;
-
 }
 
 /* Para quitar los puntos a los items de listas */
-
 header nav li {
     margin-right: 20px;
 }
@@ -63,9 +55,8 @@ ul {
     margin: 1px 20px;
     list-style: none;
 }
+
 /* list-style: none -->Para que los enlaces hereden el color de texto y no tengan subrayado */
-
-
 a {
     text-decoration: none;
     color: inherit;
@@ -83,7 +74,6 @@ main {
     text-align: center;
 }
 
-
 main p {
     line-height: 1.5;
 }
@@ -96,33 +86,27 @@ main p {
     object-fit: contain;
 }
 
-h2{
+h2 {
     display: flex;
     justify-content: center;
 }
 
-section{
-    display:flex;
+section {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20 px;
+    padding: 20px;
     text-align: justify;
     min-height: 25vh;
     max-width: 800px;
     padding-top: 50px;
 }
 
-#inicio{
+#inicio {
     justify-content: space-around;
 }
 
-/* .logo-perfil{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-} */
 .CV {
     display: inline-block;
     align-items: center;
@@ -136,12 +120,15 @@ section{
 }
 
 .CV:hover {
-    background-color: #333;
+    background-color: #9a3333;
     color: white;
-    transition: all 0.3s ease-in-out;
-    border: 2px solid white;
-    }
+    outline: 4px solid black;
+}
 
+.CV:active {
+    background-color: #ffffff;
+    color: rgb(17, 16, 16);
+  }
 
 .iconos {
     display: flex;
@@ -162,6 +149,158 @@ footer p {
     margin: 0;
     font-size: 14px;
 }
+
+.menu-toggle {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2.5rem;
+    background-color: transparent;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    /* Mostrar el botón en pantallas pequeñas */
+  }
+
+  #main-nav ul {
+    display: none;
+    /* Ocultar el menú en pantallas pequeñas */
+  }
+
+  #main-nav {
+    display: block;
+    position: absolute;
+    top: 1px;
+    right: 100px;
+    background-color: #2d2626;
+    padding: 10px;
+    border-radius: 5px;
+    
+  }
+
+  #main-nav ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  #main-nav ul li {
+    margin-bottom: 0;
+  }
+
+  #main-nav ul li a {
+    display: block;
+    padding: 10px;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+
+
+  #main-nav ul.show {
+    display: block;
+    /* Mostrar el menú al hacer clic en el botón */
+  }
+
+/* Media queries */
+
+/* Estilos para tablet */
+/* Estilos para tablet */
+@media (min-width: 768px) {
+    h2 {
+        font-size: 24px;
+    }
+
+    .CV {
+        font-size: 16px;
+    }
+
+    section {
+        align-items: center; /* Centrar contenido en tablet */
+        max-width: 1024px;
+    }
+
+    .foto-perfil {
+        margin: 2rem 0.5rem; /* Ajustar margen en tablet */
+    }
+
+    /* Estilos para el menú hamburguesa */
+    .menu-toggle {
+        display: none; /* Ocultar el botón en tablet */
+    }
+
+    #main-nav {
+
+        background-color: #333;
+
+    }
+
+    #main-nav ul {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+
+    #main-nav ul li {
+        margin-right: 20px;
+    }
+
+    #main-nav ul li a {
+        justify-content: center;
+        font-size: 18px;
+    }
+}
+
+/* Estilos para monitor normal */
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .CV {
+        font-size: 18px;
+    }
+
+    section {
+        max-width: 1440px;
+    }
+
+    /* Estilos para el menú hamburguesa */
+    .menu-toggle {
+        display: none; /* Ocultar el botón en monitor normal */
+    }
+
+    #main-nav {
+
+        background-color: #333;
+
+    }
+
+    #main-nav ul {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+
+    #main-nav ul li {
+        margin-right: 20px;
+    }
+
+    #main-nav ul li a {
+        justify-content: center;
+        font-size: 18px;
+    }
+}
+
+
+   
+
+
+/*
 
 /* Recomendaciones! 
 *  - Comenzar desde lo más general y luego ir hacia lo mas específico, asignando primero
